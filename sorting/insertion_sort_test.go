@@ -6,29 +6,6 @@ import (
 	"github.com/billjh/algo/sorting/utils"
 )
 
-func TestInsertionSort10(t *testing.T) {
-	arr := utils.GetIntArray(10)
-	sort(arr)
-	if !utils.IsSorted(arr) {
-		t.Error("array is not sorted:", arr)
-	}
-}
-
-func TestInsertionSort100(t *testing.T) {
-	arr := utils.GetIntArray(100)
-	sort(arr)
-	if !utils.IsSorted(arr) {
-		t.Error("array is not sorted:", arr)
-	}
-}
-
-func TestInsertionSort1000(t *testing.T) {
-	arr := utils.GetIntArray(1000)
-	sort(arr)
-	if !utils.IsSorted(arr) {
-		t.Error("array is not sorted:", arr)
-	}
-}
 func TestInsertionSort10000(t *testing.T) {
 	arr := utils.GetIntArray(10000)
 	sort(arr)
@@ -36,3 +13,15 @@ func TestInsertionSort10000(t *testing.T) {
 		t.Error("array is not sorted:", arr)
 	}
 }
+
+func benchmarkInsertionSort(size int, b *testing.B) {
+	arr := utils.GetIntArray(size)
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		sort(arr)
+	}
+}
+
+func BenchmarkInsertionSort100(b *testing.B)   { benchmarkInsertionSort(100, b) }
+func BenchmarkInsertionSort1000(b *testing.B)  { benchmarkInsertionSort(1000, b) }
+func BenchmarkInsertionSort10000(b *testing.B) { benchmarkInsertionSort(10000, b) }
