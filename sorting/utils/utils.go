@@ -7,7 +7,8 @@ func GetIntArray(l int) []int {
 	if l <= 0 {
 		return make([]int, 0)
 	}
-	r := rand.New(rand.NewSource(666))
+	seed := int64(666)
+	r := rand.New(rand.NewSource(seed))
 	arr := make([]int, l)
 	for i := 0; i < l; i++ {
 		arr[i] = r.Intn(10000)
