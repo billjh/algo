@@ -11,7 +11,7 @@ func GetIntArray(l int) []int {
 	r := rand.New(rand.NewSource(seed))
 	arr := make([]int, l)
 	for i := 0; i < l; i++ {
-		arr[i] = r.Intn(10000)
+		arr[i] = r.Int()
 	}
 	return arr
 }
