@@ -16,9 +16,9 @@ func mergeSort(arr []int) []int {
 
 func merge(left, right []int) []int {
 	r := make([]int, len(left)+len(right))
-	for i := 0; len(left) > 0 || len(right) > 0; i++ {
+	for i := 0; ; i++ {
 		if len(left) > 0 && len(right) > 0 {
-			// pick the smaller item when two arrays are not empty
+			// pick one smaller item when two arrays are both non-empty
 			if left[0] > right[0] {
 				r[i] = right[0]
 				right = right[1:]
