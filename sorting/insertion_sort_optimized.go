@@ -1,6 +1,6 @@
-package insertion
+package sorting
 
-func sortOpt(arr []int) {
+func optimizedInsertionSort(arr []int) {
 	for i := 1; i < len(arr); i++ {
 		unsorted := arr[i]
 		j := i - 1
