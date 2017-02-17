@@ -8,7 +8,7 @@ import (
 
 func TestBubbleSort(t *testing.T) {
 	arr := utils.GetIntArray(10000)
-	bubbleSort(arr)
+	BubbleSort(arr)
 	if !utils.IsSorted(arr) {
 		t.Error("array is not sorted:", arr)
 	}
@@ -18,7 +18,7 @@ func benchmarkBubbleSort(size int, b *testing.B) {
 	arr := utils.GetIntArray(size)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		bubbleSort(arr)
+		BubbleSort(arr)
 	}
 }
 

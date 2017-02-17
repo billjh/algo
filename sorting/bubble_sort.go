@@ -1,6 +1,6 @@
 package sorting
 
-func bubbleSort(arr []int) {
+func BubbleSort(arr []int) {
 	n := len(arr)
 	for n > 0 {
 		newn := 0

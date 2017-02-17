@@ -1,6 +1,6 @@
 package sorting
 
-func selectionSort(arr []int) {
+func SelectionSort(arr []int) {
 	for i := 0; i < len(arr)-1; i++ {
 		iMin := i
 		for j := i + 1; j < len(arr); j++ {

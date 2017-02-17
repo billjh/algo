@@ -8,7 +8,7 @@ import (
 
 func TestOptimizedInsertionSort10000(t *testing.T) {
 	arr := utils.GetIntArray(10000)
-	optimizedInsertionSort(arr)
+	OptimizedInsertionSort(arr)
 	if !utils.IsSorted(arr) {
 		t.Error("array is not sorted:", arr)
 	}
@@ -18,7 +18,7 @@ func benchmarkOptimizedInsertionSort(size int, b *testing.B) {
 	arr := utils.GetIntArray(size)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		optimizedInsertionSort(arr)
+		OptimizedInsertionSort(arr)
 	}
 }
 

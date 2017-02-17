@@ -8,7 +8,7 @@ import (
 
 func TestSelectionSort(t *testing.T) {
 	arr := utils.GetIntArray(10000)
-	selectionSort(arr)
+	SelectionSort(arr)
 	if !utils.IsSorted(arr) {
 		t.Error("array is not sorted:", arr)
 	}
@@ -18,7 +18,7 @@ func benchmarkSelectionSort(size int, b *testing.B) {
 	arr := utils.GetIntArray(size)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		selectionSort(arr)
+		SelectionSort(arr)
 	}
 }
 

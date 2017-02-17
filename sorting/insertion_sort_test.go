@@ -8,7 +8,7 @@ import (
 
 func TestInsertionSort10000(t *testing.T) {
 	arr := utils.GetIntArray(10000)
-	insertionSort(arr)
+	InsertionSort(arr)
 	if !utils.IsSorted(arr) {
 		t.Error("array is not sorted:", arr)
 	}
@@ -18,7 +18,7 @@ func benchmarkInsertionSort(size int, b *testing.B) {
 	arr := utils.GetIntArray(size)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		insertionSort(arr)
+		InsertionSort(arr)
 	}
 }
 
