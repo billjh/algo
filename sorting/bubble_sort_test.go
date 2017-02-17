@@ -18,7 +18,7 @@ func benchmarkBubbleSort(size int, b *testing.B) {
 	arr := utils.GetIntArray(size)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		selectionSort(arr)
+		bubbleSort(arr)
 	}
 }
 
