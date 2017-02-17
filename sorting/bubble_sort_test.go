@@ -10,7 +10,7 @@ func TestBubbleSort(t *testing.T) {
 	arr := utils.GetIntArray(10000)
 	BubbleSort(arr)
 	if !utils.IsSorted(arr) {
-		t.Error("array is not sorted:", arr)
+		t.Error()
 	}
 }
 

@@ -10,7 +10,7 @@ func TestSelectionSort(t *testing.T) {
 	arr := utils.GetIntArray(10000)
 	SelectionSort(arr)
 	if !utils.IsSorted(arr) {
-		t.Error("array is not sorted:", arr)
+		t.Error()
 	}
 }
 

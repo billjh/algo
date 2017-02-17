@@ -10,7 +10,7 @@ func TestOptimizedInsertionSort10000(t *testing.T) {
 	arr := utils.GetIntArray(10000)
 	OptimizedInsertionSort(arr)
 	if !utils.IsSorted(arr) {
-		t.Error("array is not sorted:", arr)
+		t.Error()
 	}
 }
 
