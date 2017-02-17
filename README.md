@@ -2,7 +2,7 @@ Algorithms and data structures implemented in golang.
 
 - Sorting
 	- [x] [Insertion sort](https://billjh.github.io/blog/2017/insertion-sort/)
-	- [ ] Selection sort
+	- [x] Selection sort
 	- [ ] Bubble sort
 	- [ ] Merge sort
 	- [ ] Heap sort
