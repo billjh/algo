@@ -4,12 +4,11 @@ package sorting
 func HeapSort(arr []int) {
 	// heapify the array into a max-heap
 	heapify(arr)
-	heap := arr[:]
-	for i := len(heap) - 1; i > 0; i-- {
+	for i := len(arr) - 1; i > 0; i-- {
 		// swap the root of the max-heap with the last item
-		heap[0], heap[i] = heap[i], heap[0]
+		arr[0], arr[i] = arr[i], arr[0]
 		// fix heap
-		siftDown(heap, 0, i)
+		siftDown(arr, 0, i)
 	}
 }
 
