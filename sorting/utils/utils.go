@@ -25,3 +25,18 @@ func IsSorted(arr []int) bool {
 	}
 	return true
 }
+
+func IsMaxHeap(heap []int) bool {
+	l := len(heap)
+	for i := 0; i < l; i++ {
+		leftChild := 2*i + 1
+		rightChild := 2*i + 2
+		if leftChild < l && heap[i] < heap[leftChild] {
+			return false
+		}
+		if rightChild < l && heap[i] < heap[rightChild] {
+			return false
+		}
+	}
+	return true
+}

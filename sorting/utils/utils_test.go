@@ -42,3 +42,28 @@ func TestIsSortedFalse(t *testing.T) {
 		}
 	}
 }
+
+func TestIsMaxHeapTrue(t *testing.T) {
+	var maxHeaps = [][]int{
+		[]int{1},
+		[]int{6, 1, 3},
+		[]int{7, 5, 2, 4, 3, 2, 1},
+	}
+	for _, heap := range maxHeaps {
+		if !IsMaxHeap(heap) {
+			t.Error(heap, "should return true")
+		}
+	}
+}
+
+func TestIsMaxHeapFalse(t *testing.T) {
+	var maxHeaps = [][]int{
+		[]int{6, 1, 7},
+		[]int{7, 5, 2, 4, 3, 2, 3},
+	}
+	for _, heap := range maxHeaps {
+		if IsMaxHeap(heap) {
+			t.Error(heap, "should return false")
+		}
+	}
+}
