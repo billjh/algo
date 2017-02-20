@@ -1,5 +1,6 @@
 package sorting
 
+// OptimizedInsertionSort Best: O(n), Average: O(n^2), Worst: O(n^2), Space: O(1)
 func OptimizedInsertionSort(arr []int) {
 	for i := 1; i < len(arr); i++ {
 		unsorted := arr[i]

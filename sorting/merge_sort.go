@@ -1,5 +1,6 @@
 package sorting
 
+// MergeSort Best: O(n), Average: O(nlgn), Worst: O(nlgn), Space: O(n)
 func MergeSort(arr []int) {
 	copy(arr, mergeSort(arr))
 }

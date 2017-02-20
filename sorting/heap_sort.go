@@ -1,5 +1,6 @@
 package sorting
 
+// HeapSort Best: O(nlgn), Average: O(nlgn), Worst: O(nlgn), Space: O(1)
 func HeapSort(arr []int) {
 	// heapify the array into a max-heap
 	heapify(arr)

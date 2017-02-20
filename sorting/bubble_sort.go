@@ -1,5 +1,6 @@
 package sorting
 
+// BubbleSort Best: O(n), Average: O(n^2), Worst: O(n^2), Space: O(1)
 func BubbleSort(arr []int) {
 	n := len(arr)
 	for n > 0 {

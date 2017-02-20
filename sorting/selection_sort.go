@@ -1,5 +1,6 @@
 package sorting
 
+// SelectionSort Time: Θ(n^2), Space: O(1)
 func SelectionSort(arr []int) {
 	for i := 0; i < len(arr)-1; i++ {
 		iMin := i
