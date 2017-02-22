@@ -8,4 +8,3 @@ Algorithms and data structures implemented in golang.
 	- [x] Heap sort
 	- [x] Quick sort
 	- [x] Counting sort
-	- [ ] Radix sort
