@@ -2,7 +2,7 @@ package utils
 
 import "math/rand"
 
-// GetIntArray returns a array of pseudo-random non-negative integers of given size
+// GetIntArray returns a array of pseudo-random non-negative integers of given size l
 func GetIntArray(l int) []int {
 	if l <= 0 {
 		return make([]int, 0)
@@ -12,6 +12,20 @@ func GetIntArray(l int) []int {
 	arr := make([]int, l)
 	for i := 0; i < l; i++ {
 		arr[i] = r.Int()
+	}
+	return arr
+}
+
+// GetIntNArray returns a array of pseudo-random 0~n integers of given size l
+func GetIntNArray(l, n int) []int {
+	if l <= 0 {
+		return make([]int, 0)
+	}
+	seed := int64(666)
+	r := rand.New(rand.NewSource(seed))
+	arr := make([]int, l)
+	for i := 0; i < l; i++ {
+		arr[i] = r.Intn(n)
 	}
 	return arr
 }
@@ -26,6 +40,7 @@ func IsSorted(arr []int) bool {
 	return true
 }
 
+// IsMaxHeap checks if the given array is a max-heap (binary heap)
 func IsMaxHeap(heap []int) bool {
 	l := len(heap)
 	for i := 0; i < l; i++ {

@@ -16,6 +16,26 @@ func TestGetIntArray(t *testing.T) {
 	}
 }
 
+func TestGetIntNArray(t *testing.T) {
+	testCases := []int{
+		0,
+		1,
+		66666,
+	}
+	n := 200000
+	for _, l := range testCases {
+		arr := GetIntNArray(l, n)
+		if len(arr) != l {
+			t.Error("array length not match")
+		}
+		for i := 0; i < l; i++ {
+			if arr[i] >= n {
+				t.Error("array item exceeds limit")
+			}
+		}
+	}
+}
+
 func TestIsSortedTrue(t *testing.T) {
 	var testCases = [][]int{
 		[]int{},
@@ -60,6 +80,7 @@ func TestIsMaxHeapFalse(t *testing.T) {
 	var maxHeaps = [][]int{
 		[]int{6, 1, 7},
 		[]int{7, 5, 2, 4, 3, 2, 3},
+		[]int{1, 2, 1},
 	}
 	for _, heap := range maxHeaps {
 		if IsMaxHeap(heap) {
