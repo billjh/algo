@@ -9,4 +9,4 @@ Algorithms and data structures implemented in golang.
 	- [x] Merge sort [(blog)](https://billjh.github.io/blog/2017/merge-sort/)
 	- [x] Heap sort [(blog)](https://billjh.github.io/blog/2017/heap-sort/)
 	- [x] Quick sort [(blog)](https://billjh.github.io/blog/2017/quick-sort/)
-	- [x] Counting sort
+	- [x] Counting sort [(blog)](https://billjh.github.io/blog/2017/counting-sort/)
